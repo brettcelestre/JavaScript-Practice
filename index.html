@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Methods Practice</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet">
+  </head>
+<body>
+  <div class='bar'></div>
+
+  <div class='credits'>
+    <h3 class='jstitle'>JavaScript Practice</h3>
+    <h4>Created by <a href='https://github.com/brettcelestre' target='new'>Brett Celestre</a></h4>
+    <button type="button" class="btn btn-primary btn-md up" id='details'>
+      <span class="glyphicon glyphicon-menu-down up" id='menu' aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="container-fluid">
+
+  <div class='topFloat'>
+    <div class='enter'>
+      <h3 class='title'>Enter something</h3>
+      <input type='text' class='inputText' placeholder='type something'>
+      <h3 class='resultTitle'>Result</h3>
+      <div class='resultBox'><h3 class='result lead'>Shows Here</h3></div>
+    </div>
+    <div class='syntax'>
+      <h3 class='title'>Syntax</h3>
+      <div class='code small'></div>
+      <h3 class='title'>Your Code</h3>
+      <div class='yourCode'></div>
+    </div>
+  </div>
+
+  <div class='col-md-12 methods'>
+    <h3 class='title'>String.prototypes - Methods</h3>
+
+    <table class="table table-striped">
+      
+      <tr> <!-- .charAt() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='charAt' class="btn btn-default">.charAt</button>
+            </div>
+            <div class='col-md-1 charAtPop'>
+              <input type='text' id='charAtIndex' class='inputNum' placeholder='index'>
+            </div>
+            <div class='col-md-10'>The <strong>charAt()</strong> method returns the character at the specified index in a string.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .charCodeAt() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='charCodeAt' class="btn btn-default">.charCodeAt</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='charCodeAtIndex' class='inputNum' placeholder='index'>
+            </div>
+            <div class='col-md-9'>The <strong>charCodeAt()</strong> method returns the Unicode of the character at the specified index in a string.<br>
+            <small><strong>Also See:</strong> .charAt() | <strong>External Info:</strong> <a href='http://unicode-table.com/en/#control-character' target='new'>Unicode Table</a></small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .concat() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='concat' class="btn btn-default">.concat</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='concatString' class='inputString' placeholder='string'>
+            </div>
+            <div class='col-md-9'>The <strong>concat()</strong> method is used to join two or more arrays.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .endsWith() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='endsWith' class="btn btn-default">.endsWith</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='endsWithString' class='inputString' placeholder='string'>
+              <input type='text' id='endsWithPos' class='inputNum' placeholder='position'>
+            </div>
+            <div class='col-md-9'>The <strong>endsWith()</strong> method determines whether a string ends with the characters of another string, returning true or false as appropriate.<br>
+            <small><strong>Also See:</strong> .startsWith(), .includes(), .indexOf(), lastIndexOf()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .indexOf() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='indexOf' class="btn btn-default">.indexOf</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='indexOfString' class='inputString' placeholder='string'>
+              <input type='text' id='indexOfStart' class='inputString' placeholder='start (optional)'>
+            </div>
+            <div class='col-md-9'>The <strong>indexOf()</strong> method returns the position of the first occurrence of a specified value in a string. Case sensitive.<br>
+            <small><strong>Also See:</strong> .lastIndexOf()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .localeCompare() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='lastIndexOf' class="btn btn-default">.lastIndexOf</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='lastIndexOfString' class='inputString' placeholder='string'>
+              <input type='text' id='lastIndexOfStart' class='inputString' placeholder='start (optional)'>
+            </div>
+            <div class='col-md-8'>The <strong>lastIndexOf()</strong> method returns the position of the last occurrence of a specified value in a string. Case sensitive.<br>
+            <small><strong>Also See:</strong> .indexOf()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .localeCompare() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='localeCompare' class="btn btn-default">.localeCompare</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='localeCompareStr2' class='inputNum' placeholder='start'>
+            </div>
+            <div class='col-md-9'>The <strong>localeCompare()</strong> method compares two strings in the current locale. Returns -1 if str1 is sorted before str2. Returns 0 if the two strings are equal. Returns 1 if str1 is sorted after str2.
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .match() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='match' class="btn btn-default">.match</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='matchStr' class='inputNum' placeholder='string'>
+            </div>
+            <div class='col-md-10'>The <strong>match()</strong> method searches a string for a match against a regular expression, and returns the matches, as an Array object.<br>
+            <small><strong>Also See:</strong>RegExp.prototype.exec(), RegExp.prototype.test()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .replace() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='replace' class="btn btn-default">.replace</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='replaceStr' class='inputNum' placeholder='string'>
+              <input type='text' id='replaceStrNew' class='inputNum' placeholder='string'>
+            </div>
+            <div class='col-md-9'>The <strong>replace()</strong> method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.<br>
+            <small><strong>Also See:</strong>String.prototype.match()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .search() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='search' class="btn btn-default">.search()</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='searchString' class='inputString' placeholder='regexp'>
+            </div>
+            <div class='col-md-9'>The <strong>search()</strong> method searches a string for a specified value, and returns the position of the match.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .slice() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='slice' class="btn btn-default">.slice</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='sliceStart' class='inputNum' placeholder='beginSlice'>
+              <input type='text' id='sliceEnd' class='inputNum' placeholder='endSlice'>
+            </div>
+            <div class='col-md-10'>The <strong>slice()</strong> method extracts parts of a string and returns the extracted parts in a new string.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .split() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='split' class="btn btn-default">.split</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='splitSeparator' class='inputNum' placeholder='separator'>
+              <input type='text' id='splitLimit' class='inputNum' placeholder='limit'>
+            </div>
+            <div class='col-md-10'>The <strong>split()</strong> method is used to split a string into an array of substrings, and returns the new array.<br>
+            <small><strong>Also See:</strong> .charAt(), indexOf(), .join()</small></div>
+            </div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .substr() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='substr' class="btn btn-default">.substr</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='substrStart' class='inputNum' placeholder='start index'>
+              <input type='text' id='substrLength' class='inputNum' placeholder='index length'>
+            </div>
+            <div class='col-md-10'>The <strong>substr()</strong> method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.<br>
+            <small><strong>Also See:</strong> .substring()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .substring() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='substring' class="btn btn-default">.substring</button>
+            </div>
+            <div class='col-md-1'>
+              <input type='text' id='substringStart' class='inputNum' placeholder='start index'>
+              <input type='text' id='substringEnd' class='inputNum' placeholder='end index'>
+            </div>
+            <div class='col-md-10'>The <strong>substring()</strong> method extracts the characters from a string, between two specified indices, and returns the new sub string.<br>
+            <small><strong>Also See:</strong> .substr()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .toLocaleLowerCase() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='toLocaleLowerCase' class="btn btn-default">.toLocaleLowerCase</button>
+            </div>
+            <div class='col-md-10'>The <strong>toLocaleLowerCase()</strong> method returns the calling string value converted to lower case, according to any locale-specific case mappings.<br>
+            <small><strong>Also See:</strong> .toLocaleUpperCase(), .toLowerCase()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .toLocaleUpperCase() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='toLocaleUpperCase' class="btn btn-default">.toLocaleUpperCase</button>
+            </div>
+            <div class='col-md-10'>The <strong>toLocaleUpperCase()</strong> method returns the calling string value converted to upper case, according to any locale-specific case mappings.<br>
+            <small><strong>Also See:</strong> .toLocaleLowerCase(), .toUpperCase()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .toLowerCase() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='toLowerCase' class="btn btn-default">.toLowerCase</button>
+            </div>
+            <div class='col-md-10'>The <strong>toLowerCase()</strong> method converts a string to lowercase letters.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .toUpperCase() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='toUpperCase' class="btn btn-default">.toUpperCase</button>
+            </div>
+            <div class='col-md-10'>The <strong>toUpperCase()</strong> method converts a string to uppercase letters.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .toString() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='toString' class="btn btn-default">.toString</button>
+            </div>
+            <div class='col-md-10'>The <strong>toString()</strong> method returns the value of a String object.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .trim() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='trim' class="btn btn-default">.trim</button>
+            </div>
+            <div class='col-md-10'>The <strong>trim()</strong> method removes whitespace from both sides of a string.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr> <!-- .valueOf() -->
+        <td>
+          <div class='row'>
+            <div class='col-md-2'>
+              <button type="button" id='valueOf' class="btn btn-default">.valueOf</button>
+            </div>
+            <div class='col-md-10'>The <strong>valueOf()</strong> method returns the primitive value of a String object.</div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- ================================================== -->
+    <h3 class='title'>String HTML Wrapper Methods</h3>
+
+    <table class="table table-striped">
+
+      <tr>
+        <td>
+          <!-- .anchor() -->
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='anchor' class="btn btn-default">.anchor()</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='anchorName' class='inputString' placeholder='Name'>
+            </div>
+            <div class='col-md-9'>The <strong>anchor()</strong> method creates an &lt;a&gt; HTML anchor element that is used as a hypertext target.<br>
+            <small><strong>Also See:</strong> .anchor()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <!-- .link() -->
+          <div class='row'>
+            <div class='col-md-1'>
+              <button type="button" id='link' class="btn btn-default">.link()</button>
+            </div>
+            <div class='col-md-2'>
+              <input type='text' id='linkURL' class='inputString' placeholder='URL'>
+            </div>
+            <div class='col-md-9'>The <strong>link()</strong> method is used to display a string as a hyperlink.<br>
+            <small><strong>Also See:</strong> .anchor()</small></div>
+          </div>
+          <br>
+        </td>
+      </tr>
+
+      </table>
+
+  </div>  
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src='code.js'></script>
+  <script src='app.js'></script>
+
+  <!-- Tooltip.js -->
+  <!-- <script src='tooltip.js'></script> -->
+  </body>
+</html>

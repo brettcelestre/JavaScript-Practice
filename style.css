@@ -1,0 +1,131 @@
+.container-fluid {
+	top: 0px;
+	margin-top: 0px;
+}
+
+.credits {
+	z-index: 4;
+	background-color: #f2f2f2;
+	position: fixed;
+	width: 237px;
+	height: 87px;
+	right: 0px;
+	top: -90px;
+	border-radius: 2px;
+	border: 2px solid #e6e6e6;
+	margin-left: 10px;
+	text-align: right;
+	padding: 0 5px 0 0;
+}
+
+#details {
+	
+}
+
+.credits2 {
+	z-index: 4;
+	position: fixed;
+	right: 0px;
+	top: -10px;
+	margin-left: 10px;
+	text-align: right;
+	padding: 0 15px 0 0;
+}
+
+.resultTitle {
+	margin: 4px 0 0 0px;
+}
+
+.bar {
+	position: fixed;
+	width: 100%;
+	height: 145px;
+	background-color: #f2f2f2;
+	top: 0px;
+	z-index: 2;
+}
+
+.redBox {
+  	border: solid 1px #990000;
+  	box-shadow: 0 0 2px 1px #990000;
+  	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.redBox:focus {
+  	border: solid 1px #990000;
+  	box-shadow: 0 0 2px 1px #990000;
+  	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.topFloat {
+	position: fixed;
+	display: flex;
+	top: 0px;
+	margin-top: -18px;
+	height: 125px;
+	width: 100%;
+	min-width: 750px;
+	z-index: 3;
+}
+
+.enter {
+	display: inline-block;
+	margin: 5px 0 0 15px;
+	width: 60%;
+	height: 100px;
+}
+
+.syntax {
+	margin: 5px 0 0 0;
+	width: 40%;
+}
+
+.inputText, .code, .yourCode {
+ 	width: 95%;
+}
+
+.resultBox  {
+	display: inline-block;
+	margin: 4px 0 0 0px;
+	width: 95%;
+	border-radius: 2px;
+	border: 1px;
+	border-color: #e6e6e6;
+	background-color: #FFF;
+}
+
+.result {
+	color: green;
+	padding-left: 3px;
+}
+
+.lead {
+	margin: 4px 0 0 0px;
+	color: green;
+}
+
+.methods {
+	padding-top: 140px;
+}
+
+.container {
+  width: 75%;
+  margin-top: 20px;
+}
+
+.inputNum {
+	width: 75px;
+}
+
+.inputArray {
+	width: 150px;
+}
+
+.red {
+	color: red;
+}
+
+.small {
+	font-size: 12px;
+	height: 9px;
+}
